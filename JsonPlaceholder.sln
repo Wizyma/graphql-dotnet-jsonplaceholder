@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholder.Api", "JsonPlaceholder.Api\JsonPlaceholder.Api.csproj", "{49143297-8B1D-4D0C-9CC9-E4DAEACAC644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholder.Infrastructure.DataSource", "JsonPlaceholder.Infrastructure.DataSource\JsonPlaceholder.Infrastructure.DataSource.csproj", "{9F9B6E23-B4CD-47CC-8E6D-DFC8AECCFB43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholder.Infrastructure.Queries", "JsonPlaceholder.Infrastructure.Queries\JsonPlaceholder.Infrastructure.Queries.csproj", "{19E208C4-0765-40E9-BC5D-1A7225723E18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,13 @@ Global
 		{49143297-8B1D-4D0C-9CC9-E4DAEACAC644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49143297-8B1D-4D0C-9CC9-E4DAEACAC644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49143297-8B1D-4D0C-9CC9-E4DAEACAC644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9B6E23-B4CD-47CC-8E6D-DFC8AECCFB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9B6E23-B4CD-47CC-8E6D-DFC8AECCFB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9B6E23-B4CD-47CC-8E6D-DFC8AECCFB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9B6E23-B4CD-47CC-8E6D-DFC8AECCFB43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E208C4-0765-40E9-BC5D-1A7225723E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E208C4-0765-40E9-BC5D-1A7225723E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E208C4-0765-40E9-BC5D-1A7225723E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E208C4-0765-40E9-BC5D-1A7225723E18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

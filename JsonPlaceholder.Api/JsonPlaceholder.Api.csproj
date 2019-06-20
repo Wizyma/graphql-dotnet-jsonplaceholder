@@ -6,27 +6,20 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Repositories\Users\" />
-    <Folder Include="Repositories\Posts\" />
-    <Folder Include="Repositories\Posts\Models\" />
-    <Folder Include="Repositories\Users\Models\" />
-    <Folder Include="GraphQLInfra\" />
-    <Folder Include="GraphQLInfra\Schemas\" />
-    <Folder Include="GraphQLInfra\Types\" />
-    <Folder Include="GraphQLInfra\Models\" />
-    <Folder Include="GraphQLInfra\Models\Users\" />
-    <Folder Include="GraphQLInfra\Models\Posts\" />
-    <Folder Include="GraphQLInfra\Query\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="GraphQL" Version="2.4.0" />
     <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
     <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Dockerfile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JsonPlaceholder.Infrastructure.Queries\JsonPlaceholder.Infrastructure.Queries.csproj" />
+  </ItemGroup>
 </Project>

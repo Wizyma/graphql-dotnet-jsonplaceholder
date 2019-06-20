@@ -3,13 +3,12 @@ using GraphQL.Http;
 using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
-using JsonPlaceholder.Api.GraphQLInfra.Query;
-using JsonPlaceholder.Api.GraphQLInfra.Schemas;
-using JsonPlaceholder.Api.GraphQLInfra.Types;
+using JsonPlaceholder.Infrastructure.Queries.Query;
+using JsonPlaceholder.Infrastructure.Queries.Schemas;
+using JsonPlaceholder.Infrastructure.Queries.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
