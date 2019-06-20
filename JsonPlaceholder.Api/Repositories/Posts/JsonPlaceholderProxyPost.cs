@@ -10,12 +10,12 @@ namespace JsonPlaceholder.Api.Repositories.Posts
 
         public async Task<List<Post>> GetAllAsync()
         {
-            return await Get<Post>();
+            return await Get<List<Post>>();
         }
 
         public async Task<List<Post>> GetByUserId(long id)
         {
-            return await Get<Post>($"userId={id}");
+            return await Get<List<Post>>($"?userId={id}");
         }
     }
 }

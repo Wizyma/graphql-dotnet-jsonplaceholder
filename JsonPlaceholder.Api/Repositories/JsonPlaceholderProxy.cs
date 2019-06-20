@@ -16,45 +16,17 @@ namespace JsonPlaceholder.Api.Repositories
             _resource = ressource;
         }
 
-        protected async Task<List<T>> Get<T>() where T: new()
+        protected async Task<T> Get<T>(string query = "") where T: new()
         {
             // when using something that use a stream we need to make sure we 
             // dispose of it (close it)
             using (var httpClient = new HttpClient())
             {
-                var response = await httpClient.GetAsync($"{_host}/{_resource}");
+                var response = await httpClient.GetAsync($"{_host}/{_resource}{query}");
 
                 var content = await response.Content.ReadAsStringAsync();
 
-                return JsonConvert.DeserializeObject<List<T>>(content);
-            }
-        }
-
-        protected async Task<List<T>> Get<T>(string query) where T : new()
-        {
-            // when using something that use a stream we need to make sure we 
-            // dispose of it (close it)
-            using (var httpClient = new HttpClient())
-            {
-                var response = await httpClient.GetAsync($"{_host}/{_resource}?{query}");
-
-                var content = await response.Content.ReadAsStringAsync();
-
-                return JsonConvert.DeserializeObject<List<T>>(content);
-            }
-        }
-
-        protected async Task<List<T>> Get<T>(long id) where T : new()
-        {
-            // when using something that use a stream we need to make sure we 
-            // dispose of it (close it)
-            using (var httpClient = new HttpClient())
-            {
-                var response = await httpClient.GetAsync($"{_host}/{_resource}/{id}");
-
-                var content = await response.Content.ReadAsStringAsync();
-
-                return JsonConvert.DeserializeObject<List<T>>(content);
+                return JsonConvert.DeserializeObject<T>(content);
             }
         }
 

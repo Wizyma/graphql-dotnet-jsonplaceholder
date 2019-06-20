@@ -17,7 +17,7 @@ namespace JsonPlaceholder.Api.GraphQLInfra.Types
             Field(p => p.Title, nullable: true);
             Field(p => p.Body, nullable: true);
             Field(p => p.UserId, nullable: false);
-            Field<UserType>("user", resolve: ctx => new JsonPlaceholderProxyUser().GetUser(ctx.Source.Id).ContinueWith(t => t.Result.Select(User.From)));
+            Field<UserType>("user", resolve: ctx => new JsonPlaceholderProxyUser().GetUser(ctx.Source.Id).ContinueWith(t => User.From(t.Result)));
         }
     }
 }
